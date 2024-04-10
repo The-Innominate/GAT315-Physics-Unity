@@ -8,6 +8,8 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField, Range(1, 10)] float speed = 2;
     [SerializeField, Range(1, 10)] float jumpHeight = 2;
     [SerializeField, Range(1, 10)] float pushPower = 2;
+    [SerializeField] private Animator animator = default;
+    [SerializeField] float speedInput;
     [SerializeField] Transform view;
 
 
@@ -23,6 +25,11 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
+        //Animation stuffs
+        speedInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).magnitude;
+        animator.SetFloat("Speed", speedInput);
+        //animator.SetFloat("Speed", new Vector3(playerVelocity.x * speed, 0, playerVelocity.z * speed).magnitude);
+
         onGround = controller.isGrounded;
         if (onGround && playerVelocity.y < 0)
         {
@@ -39,6 +46,7 @@ public class CharacterMovement : MonoBehaviour
         {
             //gameObject.transform.forward = move;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(move), Time.deltaTime * 3);
+            
         }
 
         // Changes the height position of the player..

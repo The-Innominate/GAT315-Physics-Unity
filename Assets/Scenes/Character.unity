@@ -250,6 +250,8 @@ MonoBehaviour:
   speed: 2
   jumpHeight: 1
   pushPower: 2
+  animator: {fileID: 1974036185}
+  speedInput: 0
   view: {fileID: 330585546}
 --- !u!1 &186272489 stripped
 GameObject:
@@ -1107,15 +1109,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 455556, guid: aea27ca7a35042c419065833e8daf224, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 455556, guid: aea27ca7a35042c419065833e8daf224, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 455556, guid: aea27ca7a35042c419065833e8daf224, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 455556, guid: aea27ca7a35042c419065833e8daf224, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1127,6 +1129,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 455556, guid: aea27ca7a35042c419065833e8daf224, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9545102, guid: aea27ca7a35042c419065833e8daf224, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0e3c59fc53d7c824c96c7ebad47f3c65, type: 2}
+    - target: {fileID: 9545102, guid: aea27ca7a35042c419065833e8daf224, type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1459,6 +1469,12 @@ PrefabInstance:
 --- !u!4 &1974036184 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 455556, guid: aea27ca7a35042c419065833e8daf224,
+    type: 3}
+  m_PrefabInstance: {fileID: 791722515}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1974036185 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9545102, guid: aea27ca7a35042c419065833e8daf224,
     type: 3}
   m_PrefabInstance: {fileID: 791722515}
   m_PrefabAsset: {fileID: 0}
